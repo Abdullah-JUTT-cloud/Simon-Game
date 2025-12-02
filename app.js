@@ -12,22 +12,44 @@ document.addEventListener("keypress",function(){
     }
     
 });
-function btnflash(btn){
-    btn.classList.add("flash");
+function gameflash(box){
+    box.classList.add("flash");
     setTimeout(function(){
-        btn.classList.remove("flash");
-    },1000);
+        box.classList.remove("flash");
+    },300);
+}
+function userflash(box){
+    box.classList.add("userflash");
+    setTimeout(function(){
+        box.classList.remove("userflash");
+    },300);
 }
 function levelUp(){
     level++;
     h2.innerText=`Level ${level}`;
     let randNum=Math.floor(Math.random()*3);
     let randColor=boxColors[randNum];
-    let randBtn=document.querySelector(`.${randColor}`);
+    let randBox=document.querySelector(`.${randColor}`);
     console.log(randNum);
     console.log(randColor);
-    console.log(randBtn);
-    btnflash(randBtn);
+    console.log(randBox);
+    gameSeq.push(randColor);
+    console.log(gameSeq);
+    gameflash(randBox);
+    
 
 }
+function boxClick(){
+    let box=this;
+    console.log(this);
+    userflash(box);
+
+}
+let allBox=document.querySelectorAll(".box");
+for(box of allBox){
+    box.addEventListener("click",boxClick);
+}
+
+
+
 

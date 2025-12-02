@@ -4,7 +4,7 @@ body{
 .box{
     height: 200px;
     width: 200px;
-    border: 1px solid black;
+    border: 8px solid black;
     border-radius: 20px;
     margin:2rem;
 }
@@ -27,4 +27,7 @@ body{
 }   
 .flash{
     background-color:whitesmoke;
+}
+.userflash{
+    background-color: grey;
 }
