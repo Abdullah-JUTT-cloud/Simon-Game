@@ -20,8 +20,11 @@ body{
     background-color: #63aac0;
 }
 .purple{
-    background-color: #819ff9;     
+    background-color: #819fff;     
 }
 .yellow{
     background-color: #f99b45;
 }   
+.flash{
+    background-color:whitesmoke;
+}
